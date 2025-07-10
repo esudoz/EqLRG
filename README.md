@@ -24,39 +24,49 @@ This function interprets a string-based format to construct various types of net
 Each specification includes the model name, parameters (e.g., average degree or exponent), 
 network size, and random seed, in a compact standardized format.
 
--------------------------------------------------------------------------------
-Model categories and specification formats:
--------------------------------------------------------------------------------
-
+#### Model categories and specification formats:
 Pairwise networks (Graph):
+
     - "BA_m{m}_N{N}I{seed}":
         Barabási–Albert scale-free graph with m edges per new node.
+        
     - "RN_N{N}I{seed}":
         Random tree generated via Prufer sequence.
+        
     - "ER_k{k}_N{N}I{seed}":
         Erdős–Rényi graph with average degree k.
+        
     - "ST_k{k}_g{g}_N{N}I{seed}":
         Static model with P(k) ~ k^(-g), average degree k.
-
+        
 Hypergraphs (Explicit construction):
+
     - "HBA_m{m}_N{N}I{seed}":
         Hypergraph version of BA model.
+        
     - "HRN_N{N}I{seed}":
         Hypergraph generated from a hyper-Prufer sequence.
+        
     - "HER_k{k}_N{N}I{seed}":
         Hypergraph analog of ER graph.
+        
     - "HST_k{k}_g{g}_N{N}I{seed}":
         Static hypergraph with degree P(k) ~ k^(-g), cardinality Poissonian.
+        
     - "HST_k{k}_g{g}_g{g2}_N{N}I{seed}":
         Static hypergraph with P(k) ~ k^(-g), P(c) ~ c^(-g2)
-
+        
 Hypergraphs (Bipartite lifting of pairwise networks):
+
     - "BABI_m{m}_N{N}I{seed}":
         BA network interpreted as a hypergraph via bipartite mapping.
+        
     - "RNBI_N{N}I{seed}":
         Prufer tree lifted to hypergraph.
+        
     - "ERBI_k{k}_N{N}I{seed}":
         ER graph lifted to hypergraph.
+        
     - "STBI_k{k}_g{g}_N{N}I{seed}":
         Static graph lifted to hypergraph.
 
